@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/icon2.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Quizzeo</title>
+
+  <script src="action.js"></script>
+
+</head>
+
+<body>
+  <main class="flex align-items-center justify-content-center">
+    <section id="mobile" class="flex"></section>
+    <section id="auth" class="flex direction-column">
+      <div class="panel login flex direction-column">
+        <h1 title="Quizzeo" class="flex justify-content-center">
+          <img src="img/Capture d'écran_20230206_113319.png" alt="Quizzeo logo" title="Quizzeo logo" width="175" />
+        </h1>
+        <form id="login_form" action="user_data.php" method="post">
+          <label for="email" class="sr-only">username</label>
+          <input id="login_email" type="text" name="login_email"
+            placeholder="username" />
+
+          <label for="password" class="sr-only">Password</label>
+          <input id="login_password" name="login_password" type="password"
+            placeholder="Password" />
+
+          <input id="login_button" type="submit" value="Log in" disabled>
+        </form>
+        <div class="flex separator align-items-center">
+          <span></span>
+          <div class="or">OR</div>
+          <span></span>
+        </div>
+      <div class="panel register flex justify-content-center">
+        <p>Don't have an account? </p>
+        <!-- TODO mettre une ref de sign up -->
+        <a>Sign up</a>
+      </div>
+    </ul>
+  </footer>
+</body>
+
+</html>
