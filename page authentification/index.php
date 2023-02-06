@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +7,7 @@
   <link rel="stylesheet" href="./styles.css" />
   <title>Quizzeo</title>
 
-  <script src="action.js"></script>
+
 
 </head>
 
@@ -21,16 +19,14 @@
         <h1 title="Quizzeo" class="flex justify-content-center">
           <img src="img/Capture d'écran_20230206_113319.png" alt="Quizzeo logo" title="Quizzeo logo" width="175" />
         </h1>
-        <form id="login_form" action="user_data.php" method="post">
+        <form id="login_form" action="verification.php" method="post">
           <label for="email" class="sr-only">username</label>
-          <input id="login_email" type="text" name="login_email"
-            placeholder="username" />
+          <input type="text"  placeholder="username" name="login_email" required>
 
           <label for="password" class="sr-only">Password</label>
-          <input id="login_password" name="login_password" type="password"
-            placeholder="Password" />
+          <input name="login_password" type="password" placeholder="Password" required>
 
-          <input id="login_button" type="submit" value="Log in" disabled>
+          <input  type="submit" id="login_button" value="Log in" disabled>
         </form>
         <div class="flex separator align-items-center">
           <span></span>
@@ -39,10 +35,16 @@
         </div>
       <div class="panel register flex justify-content-center">
         <p>Don't have an account? </p>
-        <!-- TODO mettre une ref de sign up -->
-        <a>Sign up</a>
+        <a href="index2.php">Sign up</a>
       </div>
     </ul>
+    <?php
+    if(isset($_GET['erreur'])){
+      $err = $_GET['erreur'];
+    if($err==1 || $err==2)
+      echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+    }
+    ?>
   </footer>
 </body>
 
