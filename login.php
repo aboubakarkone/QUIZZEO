@@ -24,7 +24,7 @@ if (isset($_SESSION["user"])) {
             if ($user) {
                 if (password_verify($password, $user["password"])) {
                     session_start();
-                    $_SESSION["user"] = "yes";
+                    $_SESSION["user"] = $email;
                     header("Location: index.php");
                     die();
                 }else{
