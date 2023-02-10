@@ -6,18 +6,8 @@ $sql = "SELECT * FROM quizz";
 $result = mysqli_query($conn, $sql);
 $quizz = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-// print the quizz
-foreach ($quizz as $q) {
-    echo "<h2>" . $q["titreQuizz"] . "</h2>";
-    echo "<p>" . $q["difficulteQuizz"] . "</p>";
-    echo "<p>" . $q["date_creationQuizz"] . "</p>";
-    echo "<a href='quizz.php?id=" . $q["IdQuizz"] . "'>Start the quizz</a>";
-}
-
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,5 +19,19 @@ foreach ($quizz as $q) {
 </head>
 <body>
     <h1>Voici la liste des quizz disponibles</h1>
+    <?php
+    foreach ($quizz as $q) {
+        echo "<h2>" . $q["titreQuizz"] . "</h2>";
+        echo "<p>" . $q["difficulteQuizz"] . "</p>";
+        echo "<p>" . $q["date_creationQuizz"] . "</p>";
+        echo "<a href='quizz.php?id=" . $q["idQuizz"] . "'>Start the quizz</a>";
+    }
+
+
+
+
+
+    ?>
 </body>
 </html>
+

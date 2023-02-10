@@ -43,7 +43,7 @@ if (isset($_POST["createQuizz"])) {
         <a href="logout.php" class="btn btn-warning">Logout</a>
     </div>
     <div class="description">
-        <p>Bienvenue sur Quizzeo, le meilleur sit de Quizz du monde !</p>
+        <p>Bienvenue sur Quizzeo, le meilleur site de Quizz du monde !</p>
         <p>Si vous êtes un simple utilisateur, cliquer sur list of Quizz pour accéder à la liste des différents quizz !</p>
         <p>Si vous êtes un quizzer, si vous souhaitez créer un quizz, cliquer sur create quizz !</p>
     </div>
